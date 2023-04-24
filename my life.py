@@ -11,6 +11,13 @@ with open("mylife.txt", "a") as file_life:
     i = 0
     yes_no = " "
 
-    ask_user = input("Are there more lines? y/n")
-    while yes_no == "y":
-        file_life.write()
+    while yes_no == " ":
+        ask_user = input("Are there more lines? y/n: ").lower()
+        if yes_no =="y":
+            user_input = input("Enter line: ")
+            file_life.write(user_input)
+            i += 1
+        
+        elif yes_no == "n":
+            print("Done!")
+            exit()
