@@ -4,11 +4,17 @@
 
 # import pyfiglet
 import pyfiglet
+# import rich
+from rich.theme import Theme
+from rich.console import Console
+
+theme_life = Theme ({"title": "bold green"})
+console_life = Console(theme = theme_life)
 
 # choose design/ format
 title = pyfiglet.figlet_format("My Life".center(55), font = "digital")
 # print title
-print(title)
+console_life.print(title, style = "title")
 
 # write a text file named mylife.txt using append
 with open("mylife.txt", "w") as file_life:
