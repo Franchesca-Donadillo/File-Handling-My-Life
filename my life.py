@@ -8,7 +8,7 @@ import pyfiglet
 from rich.theme import Theme
 from rich.console import Console
 
-theme_life = Theme ({"title": "bold green"})
+theme_life = Theme ({"title": "bold green", "load": "yellow", "lines" : "magenta", "done" : "bold blue"})
 console_life = Console(theme = theme_life)
 
 # choose design/ format
@@ -19,7 +19,7 @@ console_life.print(title, style = "title")
 # write a text file named mylife.txt using append
 with open("mylife.txt", "w") as file_life:
     # add title
-    print("_" * 60)
+    console_life.print("_" * 60, style = "lines")
     file_life.write("My Life".center(41) + "\n\n")
 
     #use while loop
@@ -36,9 +36,9 @@ with open("mylife.txt", "w") as file_life:
 
         # if there is no line to be input
         if ask_user == "n":
-            print("_"* 60)
-            print("\nLoading loading loading........")
-            print("Done! Your input is already in the text file.\n")
+            console_life.print("_"* 60, style = "lines")
+            console_life.print("\nLoading loading loading........", style = "load")
+            console_life.print("\nDone! Your input is already in the text file.\n", style = "done")
             exit()
         
     

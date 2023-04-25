@@ -1,0 +1,5 @@
+                 My Life                 
+
+Line #1: Beautiful is better than ugly.
+Line #2: Explicit is better than complex.
+Line #3: Simple is better than complex.
