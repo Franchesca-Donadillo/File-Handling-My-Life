@@ -1,3 +1,5 @@
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
+My Life
+
+Line #1: Beautiful is better than complex.
+Line #2: Explicit is better than implicit.
+Line #3: Simple is better than complex.
