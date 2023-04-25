@@ -2,11 +2,19 @@
 # BSCPE 1-5
 # Prog 3 - My life
 
+# import pyfiglet
+import pyfiglet
+
+# choose design/ format
+title = pyfiglet.figlet_format("My Life".center(55), font = "digital")
+# print title
+print(title)
+
 # write a text file named mylife.txt using append
 with open("mylife.txt", "w") as file_life:
     # add title
-    print("MY LIFE".center(55) + "\n" + "_"*60)
-    file_life.write("My Life\n\n")
+    print("_" * 60)
+    file_life.write("My Life".center(41) + "\n\n")
 
     #use while loop
     yes_no = "y"
@@ -15,7 +23,7 @@ with open("mylife.txt", "w") as file_life:
         # ask for user input
         user_input = input(f"\nEnter line {input_num}: ")
         # write the user input into mylife.txt
-        file_life.write(f"Line #{input_num}: "+ user_input + "\n")
+        file_life.write(f"Line #{input_num}: " + user_input + "\n")
         # ask user if they have more lines to add
         ask_user = input("Are there more lines? y/n: ").lower()
         input_num += 1
